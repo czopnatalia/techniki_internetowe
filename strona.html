@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Przepisy Kulinarne</title>
+    <style>
+        /* Ogólne style */
+        body {
+            margin: 0;
+            font-family: 'Poppins', sans-serif;
+            background-color: #f9f7f4;
+            color: #4a403a;
+        }
+
+        header {
+            background-color: #ffffff;
+            padding: 1em;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid #eaeaea;
+        }
+
+        header a {
+            text-decoration: none;
+            color: #4a403a;
+            font-weight: bold;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 1em;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav ul li:hover {
+            color: #a65f4e;
+        }
+
+        .search-bar {
+            display: flex;
+            align-items: center;
+            gap: 0.5em;
+        }
+
+        .search-bar input {
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            padding: 0.5em;
+        }
+
+        .search-bar button {
+            background-color: #a65f4e;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            padding: 0.5em 1em;
+            cursor: pointer;
+        }
+
+        .newsletter {
+            text-align: center;
+            margin: 2em 0;
+        }
+
+        .newsletter input, .newsletter button {
+            padding: 0.5em;
+            margin: 0.5em 0;
+        }
+
+        .footer {
+            background-color: #f1f1f1;
+            text-align: center;
+            padding: 1em 0;
+            margin-top: 2em;
+        }
+
+        .footer a {
+            text-decoration: none;
+            color: #a65f4e;
+        }
+
+        /* Strona Główna */
+        .popular-section {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1em;
+            margin: 2em;
+        }
+
+        .recipe-card {
+            background: white;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+
+        .recipe-card img {
+            width: 100%;
+            display: block;
+        }
+
+        .recipe-card h3 {
+            margin: 0;
+            padding: 1em;
+        }
+
+        @media (max-width: 768px) {
+            .popular-section {
+                grid-template-columns: 1fr;
+            }
+        }
+
+    </style>
+</head>
+<body>
+
+<header>
+    <a href="#">Logo</a>
+    <nav>
+        <ul>
+            <li><a href="#">Strona Główna</a></li>
+            <li><a href="#">Filtry</a></li>
+            <li><a href="#">Szczegóły Przepisu</a></li>
+        </ul>
+    </nav>
+    <div class="search-bar">
+        <input type="text" placeholder="Wyszukaj przepis...">
+        <button>Szukaj</button>
+    </div>
+</header>
+
+<main>
+    <section class="popular-section">
+        <article class="recipe-card">
+            <img src="placeholder.jpg" alt="Zdjęcie potrawy">
+            <h3>Przepis 1</h3>
+        </article>
+        <article class="recipe-card">
+            <img src="placeholder.jpg" alt="Zdjęcie potrawy">
+            <h3>Przepis 2</h3>
+        </article>
+        <article class="recipe-card">
+            <img src="placeholder.jpg" alt="Zdjęcie potrawy">
+            <h3>Przepis 3</h3>
+        </article>
+    </section>
+
+    <section class="newsletter">
+        <h2>Śledź najnowsze trendy</h2>
+        <form>
+            <input type="email" placeholder="Podaj swój email">
+            <button>Zapisz się</button>
+        </form>
+    </section>
+</main>
+
+<footer class="footer">
+    <p>© 2025 Przepisy Kulinarne | <a href="mailto:kontakt@przepisy.pl">kontakt@przepisy.pl</a></p>
+</footer>
+
+</body>
+</html>
