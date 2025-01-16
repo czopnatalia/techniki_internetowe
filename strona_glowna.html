@@ -1,227 +1,94 @@
 <!DOCTYPE html>
 <html lang="pl">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Strona Główna</title>
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Poppins:wght@600&display=swap" rel="stylesheet">
-    <style>
-        body {
-            font-family: 'Open Sans', sans-serif;
-            background-color: #f9f3eb;
-            margin: 0;
-            padding: 0;
-        }
+    <head>
+        <meta charset="UTF-8">
+        <title>Ugotowani</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="strona_glowna.css">
+        <link rel="shortcut icon" href="logo.png">
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Poppins:wght@600&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+        <script src="menu.js"></script>
+    </head>
+    <body>
+        <header>
+            <!--logo-->
+            <a href="#" class="logo"><img src="logo.png" alt="Logo strony"></a>
 
-        header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            background-color: #fff;
-            padding: 10px 20px;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-        }
-
-        .logo img{
-            height: 30px;
-            width: 40px;
-        }
-
-        nav {
-            display: flex;
-            gap: 15px;
-            
-        }
-
-        nav a {
-            text-decoration: none;
-            text-align: center;
-            color: #7c705b;
-            font-weight: 600;
-            transition: color 0.3s;
-            border-radius: 10px;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-        }
-
-        nav a:hover {
-            color: #865439;
-        }
-
-        .search-bar {
-            display: flex;
-            align-items: center;
-        }
-
-        .search-bar input {
-            border: 1px solid #ccc;
-            border-radius: 5px;
-            padding: 5px;
-        }
-
-        .search-bar button {
-            background-color: #865439;
-            color: #fff;
-            border: none;
-            padding: 5px 10px;
-            border-radius: 5px;
-            cursor: pointer;
-            margin-left: 5px;
-        }
-/*dalam ramdomowe zdjecie*/
-        .hero {
-            background: url('jelly3.jpg') center/cover no-repeat;
-            text-align: center;
-            padding: 50px 20px;
-        }
-
-        .hero h1 {
-            font-family: 'Poppins', sans-serif;
-            font-size: 2em;
-            color: #865439;
-        }
-
-        .popular-recipes {
-            padding: 20px;
-            text-align: center;
-        }
-
-        .popular-recipes h2 {
-            font-family: 'Poppins', sans-serif;
-            color: #865439;
-            margin-bottom: 20px;
-        }
-
-        .recipe-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 20px;
-        }
-
-        .recipe-card {
-            background-color: #fff;
-            border-radius: 10px;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-            padding: 15px;
-            text-align: center;
-            transition: transform 0.3s;
-        }
-
-        .recipe-card:hover {
-            transform: scale(1.05);
-        }
-
-        .recipe-card img {
-            width: 100%;
-            border-radius: 10px;
-        }
-
-        .recipe-card h3 {
-            font-family: 'Poppins', sans-serif;
-            color: #7c705b;
-            margin: 10px 0 0;
-        }
-
-        .newsletter {
-            background-color: #f7ebe1;
-            padding: 20px;
-            text-align: center;
-        }
-
-        .newsletter h2 {
-            font-family: 'Poppins', sans-serif;
-            color: #865439;
-        }
-
-        .newsletter input {
-            padding: 10px;
-            width: 300px;
-            margin: 10px 0;
-            border-radius: 5px;
-            border: 1px solid #ccc;
-        }
-
-        .newsletter button {
-            padding: 10px 20px;
-            background-color: #865439;
-            color: #fff;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            transition: background-color 0.3s;
-        }
-
-        .newsletter button:hover {
-            background-color: #6d3a29;
-        }
-
-        footer {
-            background-color: #fff;
-            text-align: center;
-            padding: 20px;
-            box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
-        }
-
-        footer p {
-            font-size: 0.9em;
-            color: #7c705b;
-        }
-
-        footer a {
-            color: #865439;
-            text-decoration: none;
-        }
-
-        footer a:hover {
-            text-decoration: underline;
-        }
-    </style>
-</head>
-<body>
-    <header>
-        <a href="#" class="logo"><img src="jelly3.jpg" alt="Logo strony"></a>        
-        <nav>
-            <a href="#">Typ dania</a>
-            <a href="#">Rodzaj ??</a>
-            <a href="#">Desery</a>
-            <a href="#">Kuchnia Świata</a>
-        </nav>
-        <div class="search-bar">
-            <input type="text" placeholder="Wyszukaj...">
-            <button>Szukaj</button>
-        </div>
-    </header>
-
-    <section class="hero">
-        <h1>Nazwa strony</h1>
-        <p>(Zdjęcie w tle)</p>
-    </section>
-    <!--dalam ramdomowe zdjecia-->
-    <section class="popular-recipes">
-        <h2>Najbardziej popularne</h2>
-        <div class="recipe-grid">
-            <div class="recipe-card">
-                <img src="jelly3.jpg" alt="Zdjęcie potrawy">
-                <h3>Podpis potrawy</h3>
+            <!--górne menu-->
+            <div id="menu">
+                <ul>
+                    <li>KUCHNIA
+                        <ul>
+                            <li><a href="#">WŁOSKA</a></li>
+                            <li><a href="#">AZJATYCKA</a></li>
+                            <li><a href="#">MEKSYKAŃSKA</a></li>
+                        </ul>
+                    </li>
+                    <li>RODZAJ
+                        <ul>
+                            <li><a href="#">OBIADY</a></li>
+                            <li><a href="#">ŚNIADANIA</a></li>
+                            <li><a href="#">PRZEKĄSKI</a></li>
+                        </ul>
+                    </li>
+                    <li>DIETA
+                        <ul>
+                            <li><a href="#">BEZGLUTENOWA</a></li>
+                            <li><a href="#">WEGAŃSKA</a></li>
+                            <li><a href="#">WEGETARIAŃSKA</a></li>
+                        </ul>
+                    </li>
+                    <li>DESERY
+                        <ul>
+                            <li><a href="#">TORTY</a></li>
+                            <li><a href="#">BROWNIE</a></li>
+                            <li><a href="#">SERNIKI</a></li>
+                        </ul>
+                    </li>
+                </ul>
             </div>
-            <div class="recipe-card">
-                <img src="jelly3.jpg" alt="Zdjęcie potrawy">
-                <h3>Podpis potrawy</h3>
-            </div>
-            <div class="recipe-card">
-                <img src="jelly3.jpg" alt="Zdjęcie potrawy">
-                <h3>Podpis potrawy</h3>
-            </div>
-        </div>
-    </section>
 
-    <section class="newsletter">
-        <h2>Śledź najnowsze trendy</h2>
-        <input type="email" placeholder="TwójAdres@email.com">
-        <button>Zapisz się</button>
-    </section>
+            <div class="search-bar">
+                <input type="text" placeholder="Szukaj przepisu...">
+                <button>WYSZUKAJ</button>
+            </div>
+        </header>
 
-    <footer>
-        <p>© 2025 Przepisy Kulinarne | <a href="mailto: kontakt@przepisy.pl">kontakt@przepisy.pl</a></p>
-    </footer>
-</body>
+        <section class="hero">
+            <h1>UGOTOWANI</h1>
+        </section>
+
+        <section class="popular-recipes">
+            <h2>Najbardziej popularne przepisy</h2>
+            <div class="recipe-grid">
+                <div class="recipe-card">
+                    <a href="#">
+                        <img src="burger.jpg" alt="Burgery">
+                    </a>
+                </div>
+                <div class="recipe-card">
+                    <a href="#">
+                        <img src="pizza.jpg" alt="Pizza">
+                    </a>
+                </div>
+                <div class="recipe-card">
+                    <a href="#">
+                        <img src="tiramisu.jpg" alt="Tiramisu">
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section class="newsletter">
+            <h2>Śledź najnowsze trendy</h2>
+            <input type="email" placeholder="EMAIL">
+            <button>ZAPISZ SIĘ</button>
+        </section>
+
+        <footer>
+            <p>© 2025 UGOTOWANI | <a href="mailto: kontakt@przepisy.pl">ugotowani@email.com</a></p>
+        </footer>
+    </body>
 </html>

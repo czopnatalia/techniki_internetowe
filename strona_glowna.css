@@ -1,0 +1,232 @@
+body {
+    font-family: 'Open Sans', sans-serif;
+    background-color: rgb(249, 243, 235);
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f9f3eb;
+    padding: 10px 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    position: relative; /* Dodano relative, aby z-index działał */
+    z-index: 2; /* Ustawienie większego z-index dla header */
+}
+
+.logo img{
+    height: 40px;
+    width: 40px;
+}
+
+#menu {
+    display: flex;
+    gap: 15px;
+    position: relative; /* Dodano relative, aby menu mogło mieć z-index */
+    z-index: 3; /* Menu będzie miało wyższy z-index niż tło */
+}
+
+#menu ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: inline-block;
+}
+
+#menu ul li {
+    display: inline-block;
+    padding: 10px 10px;
+    position: relative;
+    list-style-type: none;
+    min-width: 180px;
+    height: auto;
+    line-height: normal;
+    font-size: 20px;
+    color: #000000;
+    margin: 5px;
+    margin-bottom: 0px;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+#menu ul li + li {
+    border-left: 2px solid #c3c3c3; /* Pionowa linia oddzielająca elementy */
+}
+
+#menu ul li ul {
+    position: absolute;
+    left: 0;
+    top: 100%;
+    width: calc(100% + 14px); /* Dopasowuje szerokość do rodzica, uwzględniając obramowanie */
+    display: none;
+    background-color: rgb(249, 243, 235, 0.5);
+    box-sizing: border-box;
+    border-left: none;
+    z-index: 4; /* Ustawienie wyższego z-index dla rozwijanego menu */
+}
+
+#menu ul li ul li {
+    padding: 10px 10px;
+    text-align: center;
+    white-space: nowrap;
+    border-left: none;
+}
+
+#menu ul li ul li a {
+    text-decoration: none;
+    text-align: center;
+    color: #000000;
+    font-size: 18px;
+    transition: color 0.3s;
+    display: block;
+}
+
+#menu ul li ul li a:hover {
+    color: rgb(134, 84, 57);
+}
+
+.search-bar {
+    display: flex;
+    align-items: center;
+}
+
+.search-bar input {
+    border: 1px solid #ccc;
+    border-radius: 1px;
+    padding: 10px;
+    width: 300px;
+    margin: 10px 0;
+}
+
+.search-bar button {
+    background-color: #865439;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border: 1px solid #ccc;
+    border-radius: 1px;
+    cursor: pointer;
+    margin-left: 5px;
+    transition: background-color 0.3s;
+}
+
+.search-bar button:hover {
+    background-color: #6d3a29;
+}
+
+.hero {
+    background: url('glowne.jpg') center/cover no-repeat;
+    position:relative;
+    text-align: center;
+    padding: 50px 20px;
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero h1 {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 4em; /* Duży tekst */
+    color: rgba(0, 0, 0, 0.9); /* Biały tekst z lekką przezroczystością */
+    position: relative;
+    font-weight: 400; /* Normalna grubość czcionki */
+    background-color: rgb(249, 243, 235, 0.7); /* Ciemne tło dla lepszej widoczności */
+    padding: 20px 40px; /* Odstępy wokół tekstu */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); /* Delikatny cień dla eleganckiego wyglądu */
+}
+
+.popular-recipes {
+    padding: 20px;
+    text-align: center;
+}
+
+.popular-recipes h2 {
+    font-family: 'Poppins', sans-serif;
+    color: #000000;
+    padding: 20px;
+    font-size: 30px;
+}
+
+.recipe-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.recipe-card {
+    background-color:transparent;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    box-shadow: none; /* Usuń cień */
+    overflow: hidden; /* Ukryj nadmiar zawartości */
+    padding: 0; /* Usuń odstępy wewnętrzne */
+    text-align: center;
+    position: relative; /* Konieczne do obsługi efektu na obrazie */
+}
+
+.recipe-card img:hover {
+    transform: scale(1.2);
+}
+
+.recipe-card img {
+    width: 100%; /* Zdjęcie wypełnia całą szerokość */
+    height: 100%; /* Zdjęcie wypełnia całą wysokość */
+    object-fit: cover; /* Dopasowanie zdjęcia, zachowując proporcje */
+    transition: transform 0.3s ease; /* Płynny efekt zoomu */
+}
+
+.newsletter {
+    background-color: rgba(134, 84, 57, 0.6);
+    padding: 20px;
+    text-align: center;
+}
+
+.newsletter h2 {
+    font-family: 'Poppins', sans-serif;
+    color: #000000;
+}
+
+.newsletter input {
+    padding: 10px;
+    width: 300px;
+    margin: 10px 0;
+    border-radius: 1px;
+    border: 1px solid #ccc;
+}
+
+.newsletter button {
+    padding: 10px 20px;
+    background-color: #865439;
+    color: #fff;
+    border-radius: 1px;
+    border: 1px solid #ccc;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.newsletter button:hover {
+    background-color: #6d3a29;
+}
+
+footer {
+    background-color: #fff;
+    text-align: center;
+    padding: 20px;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+}
+
+footer p {
+    font-size: 0.9em;
+    color: #7c705b;
+}
+
+footer a {
+    color: #865439;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
