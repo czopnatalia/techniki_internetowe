@@ -37,24 +37,24 @@ header {
 
 #menu {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-between; /* Ensure even spacing between items */
     align-items: center;
     gap: 20px;
-    list-style: none;
-    padding: 0;
-    margin: 0;
+    position: relative; /* Dodano relative, aby menu mogło mieć z-index */
+    z-index: 3; /* Menu będzie miało wyższy z-index niż tło */
 }
-
 
 #menu ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
-    display: flex;
+    display: inline-block;
     width: 100%;
+    display: flex;
 }
 
 #menu ul li {
+    flex:1;
     display: inline-block;
     padding: 10px 10px;
     position: relative;
@@ -64,12 +64,12 @@ header {
     line-height: normal;
     font-size: 20px;
     color: #000000;
-    margin: 5px;
-    margin-bottom: 0px;
     text-align: center;
     box-sizing: border-box;
-    border-left: 2px solid #c3c3c3;
-    width: auto;
+}
+
+#menu ul li + li {
+    border-left: 2px solid #c3c3c3; /* Pionowa linia oddzielająca elementy */
 }
 
 #menu ul li ul {
@@ -90,7 +90,9 @@ header {
     white-space: nowrap;
     border-left: none;
 }
-
+#menu ul li ul li:first-child {
+    margin-top: 10px;
+}
 #menu ul li ul li a {
     text-decoration: none;
     text-align: center;
@@ -111,7 +113,7 @@ header {
 
 .search-bar input {
     border: 1px solid #ccc;
-    border-radius: 1px;
+    border-radius: 5px;
     padding: 10px;
     width: 200px;
     margin: 10px 0;
@@ -124,7 +126,7 @@ header {
     border: none;
     padding: 10px 20px;
     border: 1px solid #ccc;
-    border-radius: 1px;
+    border-radius: 5px;
     cursor: pointer;
     margin-left: 5px;
     transition: background-color 0.3s;
@@ -207,8 +209,7 @@ header {
     background-color: rgba(134, 84, 57, 0.6);
     padding: 20px;
     text-align: center;
-    width: 100%;
-    margin: 0;
+    margin-top: 20px;
 }
 
 .newsletter h2 {
@@ -220,7 +221,7 @@ header {
     padding: 10px;
     width: 300px;
     margin: 10px 0;
-    border-radius: 1px;
+    border-radius: 5px;
     border: 1px solid #ccc;
 }
 
@@ -228,8 +229,8 @@ header {
     padding: 10px 20px;
     background-color: #865439;
     color: #fff;
-    border-radius: 1px;
-    border: 1px solid #ccc;
+    border-radius: 5px;
+    border: none;
     cursor: pointer;
     transition: background-color 0.3s;
 }
@@ -237,6 +238,7 @@ header {
 .newsletter button:hover {
     background-color: #6d3a29;
 }
+
 
 footer {
     background-color: #fff;
@@ -259,6 +261,7 @@ footer a:hover {
     text-decoration: underline;
 }
 
+/*WERSJA MOBILNA*/
 
 @media only screen and (max-width: 600px) {
     .recipe-grid {
