@@ -104,14 +104,6 @@ header {
     color: rgb(134, 84, 57);
 }
 
-.menu-toggle {
-    display: none;
-    font-size: 24px;
-    background: none;
-    border: none;
-    cursor: pointer;
-}
-
 .search-bar {
     display: flex;
     align-items: center;
@@ -121,8 +113,9 @@ header {
     border: 1px solid #ccc;
     border-radius: 1px;
     padding: 10px;
-    width: 300px;
+    width: 200px;
     margin: 10px 0;
+    font-size: 14px;
 }
 
 .search-bar button {
@@ -135,6 +128,7 @@ header {
     cursor: pointer;
     margin-left: 5px;
     transition: background-color 0.3s;
+    font-size: 14px;
 }
 
 .search-bar button:hover {
@@ -278,6 +272,27 @@ footer a:hover {
     }
     #menu {
         flex-direction: column;
+    }
+    .search-bar {
+        display: flex;
+        flex-direction: column; /* Układ kolumnowy */
+        align-items: stretch; /* Rozciągnij elementy do pełnej szerokości */
+        gap: 10px; /* Odstęp między elementami */
+    }
+
+    .search-bar input,
+    .search-bar button {
+        width: 100%; /* Dopasowanie szerokości */
+        height: 50px; /* Ustal jednolitą wysokość */
+        padding: 10px; /* Odstępy wewnętrzne */
+        box-sizing: border-box; /* Uwzględnia padding i border w szerokości/wysokości */
+        margin: 0; /* Usuń ewentualne marginesy */
+        border: 1px solid #ccc; /* Ustaw jednolite obramowanie */
+        font-size: 14px; /* Dostosowanie rozmiaru tekstu */
+    }
+
+    .search-bar button {
+        width: 100%; /* Przycisk na pełną szerokość */
     }
 }
 
