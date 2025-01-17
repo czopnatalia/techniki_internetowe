@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="pl">
+    <head>
+        <meta charset="UTF-8">
+        <title>Ugotowani</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="strona_filtrowania.css">
+        <link rel="shortcut icon" href="logo_off.png">
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Poppins:wght@600&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+        <script src="menu.js"></script>
+    </head>
+    <body>
+        <header>
+            <!--logo-->
+            <a href="#" class="logo"><img src="logo_off.png" alt="Logo strony"></a>
+
+            <!--górne menu-->
+            <div id="menu">
+                <ul>
+                    <li>KUCHNIA
+                        <ul>
+                            <li><a href="#">WŁOSKA</a></li>
+                            <li><a href="#">AZJATYCKA</a></li>
+                            <li><a href="#">MEKSYKAŃSKA</a></li>
+                        </ul>
+                    </li>
+                    <li>RODZAJ
+                        <ul>
+                            <li><a href="#">OBIADY</a></li>
+                            <li><a href="#">ŚNIADANIA</a></li>
+                            <li><a href="#">PRZEKĄSKI</a></li>
+                        </ul>
+                    </li>
+                    <li>DIETA
+                        <ul>
+                            <li><a href="#">BEZGLUTENOWA</a></li>
+                            <li><a href="#">WEGAŃSKA</a></li>
+                            <li><a href="#">WEGETARIAŃSKA</a></li>
+                        </ul>
+                    </li>
+                    <li>DESERY
+                        <ul>
+                            <li><a href="#">TORTY</a></li>
+                            <li><a href="#">BROWNIE</a></li>
+                            <li><a href="#">SERNIKI</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <div class="search-bar">
+                <input type="text" placeholder="Szukaj przepisu...">
+                <button>WYSZUKAJ</button>
+            </div>
+        </header>
+
+            <div class="container">
+                <section class="filters">
+                    <h2>Filtry</h2>
+                    <div class="filter-section">
+                        <label>Słowa kluczowe:</label>
+                        <div id="KeywordList">
+                            <input type="text" id="keywordInput" placeholder="Dodaj słowo kluczowe">
+                            <button id="addKeywordBtn" onclick="addKeyword()">Dodaj</button>
+                        </div>  
+                    </div>
+                    <div class="filter-section">
+                        <label>Czas przygotowania:</label>
+                        <div>
+                            <input type="checkbox" id="short" name="short">
+                            <label for="short">10-30 min</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" id="medium" name="medium">
+                            <label for="medium">30-60 min</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" id="long" name="long">
+                            <label for="long">Powyżej 60 min</label>
+                        </div>
+                    </div>
+                    
+                    <div class="filter-section">
+                        <label>Trudność:</label>
+                        <div>
+                            <input type="checkbox" id="easy" name="easy">
+                            <label for="easy">Łatwe</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" id="medium-difficulty" name="medium-difficulty">
+                            <label for="medium-difficulty">Średnie</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" id="hard" name="hard">
+                            <label for="hard">Trudne</label>
+                        </div>
+                    </div>  
+                    
+                    <div class="filter-section">
+                        <label>Koszt:</label>
+                        <div>
+                            <input type="checkbox" id="cheap" name="cheap">
+                            <label for="cheap">40-99 zł</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" id="medium-cost" name="medium-cost">
+                            <label for="medium-cost">100-250 zł</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" id="expensive" name="expensive">
+                            <label for="expensive">Powyżej 250 zł</label>
+                        </div>
+                    </div>
+                </section>
+                <section class="filtred-recipes">
+                    <h2>Wyszukane przepisy</h2>
+                    <div class="recipe-grid">
+                        <div class="recipe-card">
+                            <a href="#">
+                                <img src="burger.jpg" alt="Burgery">
+                            </a>
+                            <h3>Tiramisu</h3> 
+                        </div>
+                        <div class="recipe-card">
+                            <a href="#">
+                                <img src="pizza.jpg" alt="Pizza">
+                            </a>
+                            <h3>Tiramisu</h3> 
+                        </div>
+                        <div class="recipe-card">
+                            <a href="#">
+                                <img src="tiramisu.jpg" alt="Tiramisu">
+                            </a>
+                            <h3>Tiramisu</h3>
+                        </div>
+                        <div class="recipe-card">
+                            <a href="#">
+                                <img src="tiramisu.jpg" alt="Tiramisu">
+                            </a>
+                            <h3>Tiramisu</h3>
+                        </div>
+                        <div class="recipe-card">
+                            <a href="#">
+                                <img src="tiramisu.jpg" alt="Tiramisu">
+                            </a>
+                            <h3>Tiramisu</h3>
+                        </div>
+                        <div class="recipe-card">
+                            <a href="#">
+                                <img src="tiramisu.jpg" alt="Tiramisu">
+                            </a>
+                        </div>
+                        <div class="recipe-card">
+                            <a href="#">
+                                <img src="tiramisu.jpg" alt="Tiramisu">
+                            </a>
+                            <h3>Tiramisu</h3>
+                        </div><div class="recipe-card">
+                            <a href="#">
+                                <img src="tiramisu.jpg" alt="Tiramisu">
+                            </a>
+                            <h3>Tiramisu</h3>
+                        </div><div class="recipe-card">
+                            <a href="#">
+                                <img src="tiramisu.jpg" alt="Tiramisu">
+                            </a>
+                            <h3>Tiramisu</h3>
+                        </div>
+                    </div>
+                </section>
+            </div>
+            <section class="newsletter">
+                <h2>Śledź najnowsze trendy</h2>
+                <input type="email" placeholder="EMAIL">
+                <button>ZAPISZ SIĘ</button>
+            </section>
+    
+            <footer>
+                <p>© 2025 UGOTOWANI | <a href="mailto: kontakt@przepisy.pl">ugotowani@email.com</a></p>
+            </footer>
+            <script scr="filtres.js"></script>
+    </body>
+</html>
+        
