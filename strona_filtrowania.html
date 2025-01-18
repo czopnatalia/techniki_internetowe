@@ -10,38 +10,38 @@
         <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
         <script src="menu.js"></script>
+        <script src="filteres.js"></script>
     </head>
     <body>
         <header>
             <!--logo-->
             <a href="#" class="logo"><img src="logo_off.png" alt="Logo strony"></a>
 
-            <!--górne menu-->
             <div id="menu">
                 <ul>
-                    <li>KUCHNIA
-                        <ul>
+                    <li class="menu-item">KUCHNIA
+                        <ul class="submenu">
                             <li><a href="#">WŁOSKA</a></li>
                             <li><a href="#">AZJATYCKA</a></li>
                             <li><a href="#">MEKSYKAŃSKA</a></li>
                         </ul>
                     </li>
-                    <li>RODZAJ
-                        <ul>
+                    <li class="menu-item">RODZAJ
+                        <ul class="submenu">
                             <li><a href="#">OBIADY</a></li>
                             <li><a href="#">ŚNIADANIA</a></li>
                             <li><a href="#">PRZEKĄSKI</a></li>
                         </ul>
                     </li>
-                    <li>DIETA
-                        <ul>
+                    <li class="menu-item">DIETA
+                        <ul class="submenu">
                             <li><a href="#">BEZGLUTENOWA</a></li>
                             <li><a href="#">WEGAŃSKA</a></li>
                             <li><a href="#">WEGETARIAŃSKA</a></li>
                         </ul>
                     </li>
-                    <li>DESERY
-                        <ul>
+                    <li class="menu-item">DESERY
+                        <ul class="submenu">
                             <li><a href="#">TORTY</a></li>
                             <li><a href="#">BROWNIE</a></li>
                             <li><a href="#">SERNIKI</a></li>
@@ -51,10 +51,14 @@
             </div>
             <div class="search-bar">
                 <input type="text" placeholder="Szukaj przepisu...">
-                <button>WYSZUKAJ</button>
+                <button onclick="window.location.href='strona_filtrowania.html';">WYSZUKAJ</button>
             </div>
         </header>
 
+        <section class="hero">
+            <h1></h1>
+        </section>
+        
             <div class="container">
                 <section class="filters">
                     <h2>Filtry</h2>
@@ -117,7 +121,7 @@
                     <h2>Wyszukane przepisy</h2>
                     <div class="recipe-grid">
                         <div class="recipe-card">
-                            <a href="#">
+                            <a href="strona_szczegolowa.html">
                                 <img src="burger.jpg" alt="Burgery">
                             </a>
                             <h3>Tiramisu</h3> 
@@ -150,6 +154,7 @@
                             <a href="#">
                                 <img src="tiramisu.jpg" alt="Tiramisu">
                             </a>
+                            <h3>Tiramisu</h3>
                         </div>
                         <div class="recipe-card">
                             <a href="#">
@@ -172,12 +177,13 @@
             </div>
             <section class="newsletter">
                 <h2>Śledź najnowsze trendy</h2>
+                <p>Dzięki newsletterowi będziesz na bieżąco z wszystkimi nowościami!</p>
                 <input type="email" placeholder="EMAIL">
                 <button>ZAPISZ SIĘ</button>
             </section>
     
             <footer>
-                <p>© 2025 UGOTOWANI | <a href="mailto: kontakt@przepisy.pl">ugotowani@email.com</a></p>
+                <p>&copy; 2025 UGOTOWANI | <a href="mailto: kontakt@przepisy.pl">ugotowani@email.com</a></p>
             </footer>
             <script scr="filtres.js"></script>
     </body>

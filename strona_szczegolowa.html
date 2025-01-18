@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pl">
+    <head>
+        <meta charset="UTF-8">
+        <title>Ugotowani</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="strona_szczegolowa.css">
+        <link rel="shortcut icon" href="logo_off.png">
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Poppins:wght@600&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+        <script src="menu.js"></script>
+    </head>
+    <body>
+        <header>
+            <!--logo-->
+            <a href="#" class="logo"><img src="logo_off.png" alt="Logo strony"></a>
+            
+            <!--górne menu-->
+            <div id="menu">
+                <ul>
+                    <li class="menu-item">KUCHNIA
+                        <ul class="submenu">
+                            <li><a href="#">WŁOSKA</a></li>
+                            <li><a href="#">AZJATYCKA</a></li>
+                            <li><a href="#">MEKSYKAŃSKA</a></li>
+                        </ul>
+                    </li>
+                    <li class="menu-item">RODZAJ
+                        <ul class="submenu">
+                            <li><a href="#">OBIADY</a></li>
+                            <li><a href="#">ŚNIADANIA</a></li>
+                            <li><a href="#">PRZEKĄSKI</a></li>
+                        </ul>
+                    </li>
+                    <li class="menu-item">DIETA
+                        <ul class="submenu">
+                            <li><a href="#">BEZGLUTENOWA</a></li>
+                            <li><a href="#">WEGAŃSKA</a></li>
+                            <li><a href="#">WEGETARIAŃSKA</a></li>
+                        </ul>
+                    </li>
+                    <li class="menu-item">DESERY
+                        <ul class="submenu">
+                            <li><a href="#">TORTY</a></li>
+                            <li><a href="#">BROWNIE</a></li>
+                            <li><a href="#">SERNIKI</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="search-bar">
+                <input type="text" placeholder="Szukaj przepisu...">
+                <button onclick="window.location.href='strona_filtrowania.html';">WYSZUKAJ</button>
+            </div>
+        </header>
+
+        <section class="hero">
+            <h1></h1>
+        </section>
+
+        <section class="popular-recipes">
+            <h2>Najbardziej popularne przepisy</h2>
+            <div class="recipe-grid">
+                <div class="recipe-card">
+                    <a href="#">
+                        <img src="burger.jpg" alt="Burgery">
+                    </a>
+                </div>
+                <div class="recipe-card">
+                    <a href="#">
+                        <img src="pizza.jpg" alt="Pizza">
+                    </a>
+                </div>
+                <div class="recipe-card">
+                    <a href="#">
+                        <img src="tiramisu.jpg" alt="Tiramisu">
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section class="newsletter">
+            <h2>Śledź najnowsze trendy</h2>
+            <p>Dzięki newsletterowi będziesz na bieżąco z wszystkimi nowościami!</p>
+            <input type="email" placeholder="EMAIL">
+            <button>ZAPISZ SIĘ</button>
+        </section>
+
+        <footer>
+            <p>&copy; 2025 UGOTOWANI | <a href="mailto: kontakt@przepisy.pl">ugotowani@email.com</a></p>
+        </footer>
+    </body>
+</html>
