@@ -72,3 +72,22 @@ $(document).ready(function () {
         }
     });
 });
+
+
+document.addEventListener("DOMContentLoaded", function () {
+    const scrollLink = document.querySelector("#scroll-link");
+
+    if (scrollLink) {
+        scrollLink.addEventListener("click", function (event) {
+            event.preventDefault(); // Zapobiega domyślnemu zachowaniu linku
+            const targetSection = document.querySelector("#popular-recipes");
+            
+            if (targetSection) {
+                window.scrollTo({
+                    top: targetSection.offsetTop,
+                    behavior: "smooth" // Płynne przewijanie
+                });
+            }
+        });
+    }
+});

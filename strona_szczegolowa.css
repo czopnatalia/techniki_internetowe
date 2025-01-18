@@ -135,27 +135,17 @@ header {
 }
 
 .hero {
-    background: url('glowne.jpg') center/cover no-repeat;
+    background: url('glowne_male.jpg') center/cover no-repeat;
     position:relative;
     text-align: center;
     padding: 0;
     margin: 0;
-    height: 650px;
+    height: 500px;
     display: flex;
     justify-content: center;
     align-items: center;
     width: 100%;
-}
-
-.hero h1 {
-    font-family: 'Open Sans', sans-serif;
-    font-size: 4em; /* Duży tekst */
-    color: rgba(0, 0, 0, 0.9); /* Biały tekst z lekką przezroczystością */
-    position: relative;
-    font-weight: 400; /* Normalna grubość czcionki */
-    background-color: rgb(249, 243, 235, 0.7); /* Ciemne tło dla lepszej widoczności */
-    padding: 20px 40px; /* Odstępy wokół tekstu */
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); /* Delikatny cień dla eleganckiego wyglądu */
+    height: 200px;
 }
 
 .popular-recipes {
@@ -256,22 +246,6 @@ footer a {
 
 footer a:hover {
     text-decoration: underline;
-}
-
-/* Stylizacja linku w nagłówku */
-#scroll-link {
-    text-decoration: none; /* Usuń podkreślenie */
-    color: inherit; /* Użyj koloru tekstu z rodzica */
-    cursor: pointer; /* Dodaj wskaźnik wskazujący na klikalność */
-}
-
-#scroll-link:hover {
-    color: #865439; /* Opcjonalnie zmień kolor na hover */
-}
-
-/* Dodaj płynne przewijanie dla całej strony */
-html {
-    scroll-behavior: smooth;
 }
 
 /*WERSJA MOBILNA*/

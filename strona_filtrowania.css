@@ -1,12 +1,26 @@
+* {
+    box-sizing: border-box;
+}
+
+body, header, section, footer {
+    width: 100%;
+    max-width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
 body {
     font-family: 'Open Sans', sans-serif;
     background-color: rgb(249, 243, 235);
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+    width: 100%;
 }
 
 header {
     display: flex;
+    flex-direction: row;
     justify-content: space-between;
     align-items: center;
     background-color: #f9f3eb;
@@ -20,6 +34,7 @@ header {
     height: 40px;
     width: 40px;
 }
+
 #menu {
     display: flex;
     justify-content: space-between; /* Ensure even spacing between items */
@@ -39,6 +54,7 @@ header {
 }
 
 #menu ul li {
+    flex:1;
     display: inline-block;
     padding: 10px 10px;
     position: relative;
@@ -50,9 +66,6 @@ header {
     color: #000000;
     text-align: center;
     box-sizing: border-box;
-}
-
-#menu ul li + li {
     border-left: 2px solid #c3c3c3; /* Pionowa linia oddzielająca elementy */
 }
 
@@ -60,7 +73,7 @@ header {
     position: absolute;
     left: 0;
     top: 100%;
-    width: calc(100% + 14px); /* Dopasowuje szerokość do rodzica, uwzględniając obramowanie */
+    width: calc(100%); /* Dopasowuje szerokość do rodzica, uwzględniając obramowanie */
     display: none;
     background-color: rgb(249, 243, 235, 0.5);
     box-sizing: border-box;
@@ -97,10 +110,11 @@ header {
 
 .search-bar input {
     border: 1px solid #ccc;
-    border-radius:5px;
+    border-radius: 5px;
     padding: 10px;
-    width: 300px;
+    width: 200px;
     margin: 10px 0;
+    font-size: 14px;
 }
 
 .search-bar button {
@@ -113,16 +127,31 @@ header {
     cursor: pointer;
     margin-left: 5px;
     transition: background-color 0.3s;
+    font-size: 14px;
 }
 
 .search-bar button:hover {
     background-color: #6d3a29;
 }
 
+.hero {
+    background: url('glowne_male.jpg') center/cover no-repeat;
+    position:relative;
+    text-align: center;
+    padding: 0;
+    margin: 0;
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 200px;
+}
+
 .container {
     display: flex;
-    margin: 50px auto;
-    gap: 20px;
+    margin: 10px auto;
+    gap: 10px;
     margin-left: 20px;
 }
 
@@ -299,4 +328,102 @@ footer a {
 
 footer a:hover {
     text-decoration: underline;
+}
+
+
+@media only screen and (max-width: 600px) {
+    #menu {
+        flex-direction: column;
+    }
+    .search-bar {
+        display: flex;
+        flex-direction: column; /* Układ kolumnowy */
+        align-items: stretch; /* Rozciągnij elementy do pełnej szerokości */
+        gap: 10px; /* Odstęp między elementami */
+    }
+
+    .search-bar input,
+    .search-bar button {
+        width: 100%; /* Dopasowanie szerokości */
+        height: 50px; /* Ustal jednolitą wysokość */
+        padding: 10px; /* Odstępy wewnętrzne */
+        box-sizing: border-box; /* Uwzględnia padding i border w szerokości/wysokości */
+        margin: 0; /* Usuń ewentualne marginesy */
+        border: 1px solid #ccc; /* Ustaw jednolite obramowanie */
+        font-size: 14px; /* Dostosowanie rozmiaru tekstu */
+    }
+
+    .search-bar button {
+        width: 100%; /* Przycisk na pełną szerokość */
+    }
+}
+
+@media only screen and (max-width: 1260px) {
+    #menu {
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        width: 100%;
+        align-items: flex-start; /* Przesunięcie menu blisko logo */
+    }
+
+    #menu ul {
+        display: block;  /* Ustawienie menu na blokowy */
+        padding: 0;
+        margin: 0;
+        width: 100%; /* Menu zajmuje całą szerokość */
+    }
+
+    #menu ul li {
+        display: block;  /* Każdy element menu na pełnej szerokości */
+        padding: 10px 20px;
+        border: none;
+        text-align: left;  /* Wyrównanie tekstu do lewej */
+        position: relative;
+        width: 100%; /* Szerokość elementów menu na 100% */
+    }
+
+    #menu ul li ul {
+        display: none;
+        position: relative;
+        left: 0%;  /* Pozycjonowanie rozwijanego menu po prawej stronie */
+        top: 100%;
+        width: 100%; /* Szerokość submenu ustawiona na 100% */
+        background-color: rgb(249, 243, 235);
+        min-width: 180px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        border-left: 2px solid #c3c3c3;
+        text-align: left;
+        padding: 0; /* Usuwamy padding, aby submenu było jednolite */
+    }
+
+    #menu ul li ul li {
+        padding: 10px 20px;
+        text-align: left; /* Wyrównanie tekstu w submenu */
+        width: 100%; /* Submenu ma zajmować pełną szerokość */
+    }
+
+    #menu ul li ul li a {
+        text-decoration: none;
+        color: #000;
+        display: block; /* Linki w submenu zajmują całą szerokość */
+        width: 100%; /* Szerokość linków dopasowana do szerokości submenu */
+        text-align: left; /* Wyrównanie tekstu do lewej strony */
+    }
+}
+
+@media only screen and (min-width: 1261px) {
+    #menu ul {
+        display: flex;  /* Menu w poziomie */
+        flex-direction: row;
+        gap: 20px;
+    }
+
+    #menu ul li {
+        display: inline-block;  /* Ustawienie elementów w jednym wierszu */
+    }
+
+    #menu ul li ul {
+        display: none;  /* Submenu będzie wyświetlane tylko przy hover */
+    }
 }
