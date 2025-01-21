@@ -1,7 +1,7 @@
 window.recipes = {
     burger: {
         title: "Burger",
-        tags: ["Fast food", "Mięso", "Trudne", "40-99 zł"],
+        tags: ["Fast food", "Mięso", "Trudne", "40-99 zł", "azjatycka"],
         timeFilter: "short",
         difficultyFilter: "hard",
         costFilter: "cheap",
@@ -21,7 +21,7 @@ window.recipes = {
             "Złóż burgera w bułce."
         ]
     },
-    pizza: {
+    'pizza-margherita': {
         title: "Pizza Margherita",
         tags: ["włoska", "Pizza", "Średnie", "40-99 zł"],
         timeFilter: "medium",

@@ -8,14 +8,18 @@ $(document).ready(function () {
         });
     }
     //Obsługa kliknięcia w linki kategorii w menu
-   $('#menu ul li a').on('click', function (event) {
-    const href = $(this).attr('href');
-    if (href.includes("category")) {
-        event.preventDefault(); // Zapobiega domyślnemu przekierowaniu
-        const category = encodeURIComponent(href.split("category=")[1]); // Kodowanie kategorii
-        window.location.href = `strona_filtrowania.html?category=${category}`;
-    }
-});
+    $(document).ready(function () {
+        // Obsługa kliknięcia w linki kategorii w menu
+        $('#menu ul li a').on('click', function (event) {
+            const href = $(this).attr('href');
+            if (href.includes("category")) {
+                event.preventDefault(); // Zapobiega domyślnemu działaniu linku
+                const category = encodeURIComponent(href.split("category=")[1]); // Wyodrębnij nazwę kategorii z URL
+                window.location.href = `strona_filtrowania.html?category=${category}`; // Przekieruj na stronę filtrowania z kategorią
+            }
+        });
+    });
+    
 
 
     // Obsługa newslettera
