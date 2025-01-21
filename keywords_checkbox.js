@@ -75,7 +75,7 @@ function applyFilters() {
             .map(recipe => `
                 <div class="recipe-card">
                     <a href="strona_szczegolowa.html?id=${encodeURIComponent(recipe.title.toLowerCase().replace(/\s+/g, "-"))}">
-                        <img src="${recipe.image}" alt="${recipe.title}">
+                        <img src="${recipe.image}" alt="${recipe.title}" />
                         <h3>${recipe.title}</h3>
                     </a>
                 </div>
@@ -84,8 +84,6 @@ function applyFilters() {
     } else {
         recipeContainer.innerHTML = "<p>Nie znaleziono przepisów pasujących do wybranych filtrów.</p>";
     }
-
-    filterRecipes();
 }
 
 // Funkcja filtrowania widocznych elementów na podstawie atrybutów `data-filters`
