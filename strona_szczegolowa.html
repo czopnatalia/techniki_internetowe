@@ -2,49 +2,55 @@
 <html lang="pl">
     <head>
         <meta charset="UTF-8">
-        <title>Ugotowani</title>
+        <title>Ugotowani-Szczegóły przepisu</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" type="text/css" href="strona_szczegolowa.css">
         <link rel="shortcut icon" href="logo_off.png">
         <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Poppins:wght@600&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+        <script src="recipes.js"></script>
         <script src="menu.js"></script>
+        <script src="detail-page.js"></script>
+        <script src="navigate.js"></script>
+        <script src="search.js"></script>
+
+
     </head>
     <body>
         <header>
             <!--logo-->
-            <a href="#" class="logo"><img src="logo_off.png" alt="Logo strony"></a>
-            
-            <!--górne menu-->
-            <div id="menu">
+            <a href="#" class="logo" id="logo"><img src="logo_off.png" alt="Logo strony"></a>
+
+               <!--górne menu-->
+               <div id="menu">
                 <ul>
                     <li class="menu-item">KUCHNIA
                         <ul class="submenu">
-                            <li><a href="#">WŁOSKA</a></li>
-                            <li><a href="#">AZJATYCKA</a></li>
-                            <li><a href="#">MEKSYKAŃSKA</a></li>
+                            <li><a href="strona_filtrowania.html?category=kuchnia-włoska">WŁOSKA</a></li>
+                            <li><a href="strona_filtrowania.html?category=kuchnia-azjatycka">AZJATYCKA</a></li>
+                            <li><a href="strona_filtrowania.html?category=kuchnia-meksykańska">MEKSYKAŃSKA</a></li>
                         </ul>
                     </li>
                     <li class="menu-item">RODZAJ
                         <ul class="submenu">
-                            <li><a href="#">OBIADY</a></li>
-                            <li><a href="#">ŚNIADANIA</a></li>
-                            <li><a href="#">PRZEKĄSKI</a></li>
+                            <li><a href="strona_filtrowania.html?category=rodzaj-obiady">OBIADY</a></li>
+                            <li><a href="strona_filtrowania.html?category=rodzaj-śniadania">ŚNIADANIA</a></li>
+                            <li><a href="strona_filtrowania.html?category=rodzaj-przekąski">PRZEKĄSKI</a></li>
                         </ul>
                     </li>
                     <li class="menu-item">DIETA
                         <ul class="submenu">
-                            <li><a href="#">BEZGLUTENOWA</a></li>
-                            <li><a href="#">WEGAŃSKA</a></li>
-                            <li><a href="#">WEGETARIAŃSKA</a></li>
+                            <li><a href="strona_filtrowania.html?category=dieta-bezglutenowa">BEZGLUTENOWA</a></li>
+                            <li><a href="strona_filtrowania.html?category=dieta-wegańska">WEGAŃSKA</a></li>
+                            <li><a href="strona_filtrowania.html?category=dieta-wegetariańska">WEGETARIAŃSKA</a></li>
                         </ul>
                     </li>
                     <li class="menu-item">DESERY
                         <ul class="submenu">
-                            <li><a href="#">TORTY</a></li>
-                            <li><a href="#">BROWNIE</a></li>
-                            <li><a href="#">SERNIKI</a></li>
+                            <li><a href="strona_filtrowania.html?category=desery-torty">TORTY</a></li>
+                            <li><a href="strona_filtrowania.html?category=desery-brownie">BROWNIE</a></li>
+                            <li><a href="strona_filtrowania.html?category=desery-serniki">SERNIKI</a></li>
                         </ul>
                     </li>
                 </ul>
@@ -60,32 +66,35 @@
             <h1></h1>
         </section>
 
-        <section class="popular-recipes">
-            <h2>Najbardziej popularne przepisy</h2>
-            <div class="recipe-grid">
-                <div class="recipe-card">
-                    <a href="#">
-                        <img src="burger.jpg" alt="Burgery">
-                    </a>
+        <div class="container">
+            <section class="recipe-header">
+                <img id="recipe-image" src="" alt="Zdjęcie przepisu">
+                <div class="recipe-info">
+                    <h2 id="recipe-title"></h2>
+                    <div class="tags" id="recipe-tags"></div>
+                    <p>Czas przygotowania: <span id="recipe-time"></span></p>
+                    <p>Ilość porcji: <span id="recipe-portions"></span></p>
+                    <button class="show-recipe-btn" onclick="toggleRecipeDetails()">Pokaż przepis</button>
                 </div>
-                <div class="recipe-card">
-                    <a href="#">
-                        <img src="pizza.jpg" alt="Pizza">
-                    </a>
+            </section>
+    
+            <div class="recipe-body hidden">
+                <div class="ingredients">
+                    <h3>Składniki:</h3>
+                    <ul id="ingredients-list"></ul>
                 </div>
-                <div class="recipe-card">
-                    <a href="#">
-                        <img src="tiramisu.jpg" alt="Tiramisu">
-                    </a>
+                <div class="instructions">
+                    <h3>Wykonanie:</h3>
+                    <ol id="instructions-list"></ol>
                 </div>
             </div>
-        </section>
-
+        </div>
+        
         <section class="newsletter">
             <h2>Śledź najnowsze trendy</h2>
             <p>Dzięki newsletterowi będziesz na bieżąco z wszystkimi nowościami!</p>
-            <input type="email" placeholder="EMAIL">
-            <button>ZAPISZ SIĘ</button>
+            <input id="newsletter-email" type="email" placeholder="EMAIL">
+            <button id="newsletter-submit">ZAPISZ SIĘ</button>
         </section>
 
         <footer>
