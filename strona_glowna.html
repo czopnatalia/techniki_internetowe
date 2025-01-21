@@ -9,51 +9,58 @@
         <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Poppins:wght@600&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+        <script src="recipes.js"></script>
         <script src="menu.js"></script>
+        <script src="navigate.js"></script>
+        <script src="search.js"></script>
+
+
+
     </head>
     <body>
         <header>
             <!--logo-->
-            <a href="#" class="logo"><img src="logo_off.png" alt="Logo strony"></a>
+            <a href="#" class="logo" id="logo"><img src="logo_off.png" alt="Logo strony"></a>
             
             <!--górne menu-->
             <div id="menu">
                 <ul>
                     <li class="menu-item">KUCHNIA
                         <ul class="submenu">
-                            <li><a href="#">WŁOSKA</a></li>
-                            <li><a href="#">AZJATYCKA</a></li>
-                            <li><a href="#">MEKSYKAŃSKA</a></li>
+                            <li><a href="strona_filtrowania.html?category=kuchnia-włoska">WŁOSKA</a></li>
+                            <li><a href="strona_filtrowania.html?category=kuchnia-azjatycka">AZJATYCKA</a></li>
+                            <li><a href="strona_filtrowania.html?category=kuchnia-meksykańska">MEKSYKAŃSKA</a></li>
                         </ul>
                     </li>
                     <li class="menu-item">RODZAJ
                         <ul class="submenu">
-                            <li><a href="#">OBIADY</a></li>
-                            <li><a href="#">ŚNIADANIA</a></li>
-                            <li><a href="#">PRZEKĄSKI</a></li>
+                            <li><a href="strona_filtrowania.html?category=rodzaj-obiady">OBIADY</a></li>
+                            <li><a href="strona_filtrowania.html?category=rodzaj-śniadania">ŚNIADANIA</a></li>
+                            <li><a href="strona_filtrowania.html?category=rodzaj-przekąski">PRZEKĄSKI</a></li>
                         </ul>
                     </li>
                     <li class="menu-item">DIETA
                         <ul class="submenu">
-                            <li><a href="#">BEZGLUTENOWA</a></li>
-                            <li><a href="#">WEGAŃSKA</a></li>
-                            <li><a href="#">WEGETARIAŃSKA</a></li>
+                            <li><a href="strona_filtrowania.html?category=dieta-bezglutenowa">BEZGLUTENOWA</a></li>
+                            <li><a href="strona_filtrowania.html?category=dieta-wegańska">WEGAŃSKA</a></li>
+                            <li><a href="strona_filtrowania.html?category=dieta-wegetariańska">WEGETARIAŃSKA</a></li>
                         </ul>
                     </li>
                     <li class="menu-item">DESERY
                         <ul class="submenu">
-                            <li><a href="#">TORTY</a></li>
-                            <li><a href="#">BROWNIE</a></li>
-                            <li><a href="#">SERNIKI</a></li>
+                            <li><a href="strona_filtrowania.html?category=desery-torty">TORTY</a></li>
+                            <li><a href="strona_filtrowania.html?category=desery-brownie">BROWNIE</a></li>
+                            <li><a href="strona_filtrowania.html?category=desery-serniki">SERNIKI</a></li>
                         </ul>
                     </li>
                 </ul>
             </div>
 
             <div class="search-bar">
-                <input type="text" placeholder="Szukaj przepisu...">
-                <button onclick="window.location.href='strona_filtrowania.html';">WYSZUKAJ</button>
+                <input type="text" id="searchInput" placeholder="Szukaj przepisu...">
+                <button onclick="searchRecipe()">WYSZUKAJ</button>
             </div>
+            
         </header>
 
         <section class="hero">
@@ -63,20 +70,14 @@
         <section class="popular-recipes" id="popular-recipes">
             <h2>Najbardziej popularne przepisy</h2>
             <div class="recipe-grid">
-                <div class="recipe-card">
-                    <a href="strona_szczegolowa.html">
-                        <img src="burger.jpg" alt="Burgery">
-                    </a>
+                <div class="recipe-card" onclick="navigateToDetail('burger')">
+                    <img src="burger.jpg" alt="Burgery">
                 </div>
-                <div class="recipe-card">
-                    <a href="strona_szczegolowa.html">
-                        <img src="pizza.jpg" alt="Pizza">
-                    </a>
+                <div class="recipe-card" onclick="navigateToDetail('pizza-margherita')">
+                    <img src="pizza.jpg" alt="Pizza">
                 </div>
-                <div class="recipe-card">
-                    <a href="strona_szczegolowa.html">
-                        <img src="tiramisu.jpg" alt="Tiramisu">
-                    </a>
+                <div class="recipe-card" onclick="navigateToDetail('tiramisu')">
+                    <img src="tiramisu.jpg" alt="Tiramisu">
                 </div>
             </div>
         </section>
@@ -84,8 +85,8 @@
         <section class="newsletter">
             <h2>Śledź najnowsze trendy</h2>
             <p>Dzięki newsletterowi będziesz na bieżąco z wszystkimi nowościami!</p>
-            <input type="email" placeholder="EMAIL">
-            <button>ZAPISZ SIĘ</button>
+            <input id="newsletter-email" type="email" placeholder="EMAIL">
+            <button id="newsletter-submit">ZAPISZ SIĘ</button>
         </section>
 
         <footer>

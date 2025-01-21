@@ -1,4 +1,45 @@
 $(document).ready(function () {
+    // Funkcja związana z logo
+    const logo = document.getElementById("logo");
+    if (logo) {
+        logo.addEventListener("click", function (event) {
+            event.preventDefault(); // Zapobiega domyślnemu działaniu linku
+            window.location.href = "strona_glowna.html"; // Przekierowanie na stronę główną
+        });
+    }
+    //Obsługa kliknięcia w linki kategorii w menu
+    $('#menu ul li a').on('click', function (event) {
+        const href = $(this).attr('href');
+        if (href.includes("category")) {
+            event.preventDefault(); // Zapobiega domyślnemu działaniu linku
+            const category = href.split("category=")[1]; // Wyodrębnij kategorię z URL
+            console.log("Przekierowanie na kategorię:", category); // Debugowanie
+            window.location.href = `strona_filtrowania.html?category=${encodeURIComponent(category)}`; // Przekieruj na stronę filtrowania
+        }
+    });
+
+    
+
+
+    // Obsługa newslettera
+    const newsletterSubmit = document.getElementById("newsletter-submit");
+    if (newsletterSubmit) {
+        newsletterSubmit.addEventListener("click", function () {
+            const emailInput = document.getElementById("newsletter-email");
+            if (!emailInput || emailInput.value.trim() === "") {
+                alert("Proszę podać adres e-mail.");
+                return;
+            }
+
+            // Usunięcie formularza po zapisie
+            const newsletterSection = document.querySelector(".newsletter");
+            if (newsletterSection) {
+                newsletterSection.innerHTML = "<p>Dziękujemy za zapisanie się do naszego newslettera!</p>";
+            }
+        });
+    }
+
+        
     // Funkcja dla dużych ekranów (>1260px) - hover
     if ($(window).width() > 1260) {
         $('#menu ul li').hover(

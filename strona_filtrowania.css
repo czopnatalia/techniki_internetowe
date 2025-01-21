@@ -140,139 +140,11 @@ header {
     text-align: center;
     padding: 0;
     margin: 0;
-    height: 500px;
     display: flex;
     justify-content: center;
     align-items: center;
     width: 100%;
     height: 200px;
-}
-
-.container {
-    display: flex;
-    margin: 10px auto;
-    gap: 10px;
-    margin-left: 20px;
-}
-
-.filters {
-    flex: 1;
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    max-width: 500px; 
-    height: 675px;
-    margin-top: 80px;
-
-}
-.filters h2 {
-    font-family: 'Poppins', sans-serif;
-    color: #865439;
-    margin-bottom: 15px;
-    font-size: 1.5em;
-    text-align: left;
-}
-
-.filter-section {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    margin-bottom: 15px;
-}
-.filter-section div {
-    display: flex;
-    align-items: center; 
-    gap: 10px; 
-    margin-bottom: 8px;
-}
-
-.filter-section label {
-    color: #7c705b;
-    font-size: 1em;
-    line-height: 1.5;
-    cursor: pointer; 
-}
-
-.filter-section input[type="checkbox"] {
-    appearance: none;
-    width: 16px;
-    height: 16px;
-    border: 2px solid #7c705b;
-    border-radius: 5px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-}
-
-.filter-section input[type="checkbox"]:checked {
-    background-color: #D8F3DC;/*zmienic kolory*/
-    border-color: #A7C957;
-}
-
-#keywordInput {
-    width: auto;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-}
-
-#addKeywordBtn {
-    display: block;
-    margin: 10px auto; 
-    padding: 10px;
-    background-color: #865439;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    text-align: center; 
-}
-
-#addKeywordBtn:hover {
-    background-color: #6d3a29;
-}
-
-.filtred-recipes h2 {
-    font-family: 'Poppins', sans-serif;
-    color: #6d3a29;
-    padding: 20px;
-    font-size: 30px;
-    margin-top:80px;
-}
-.recipe-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
-}
-.recipe-card {
-    background-color:transparent;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    box-shadow: none; 
-    overflow: hidden; 
-    padding: 0; 
-    text-align: center;
-    position: relative;
-}
-
-.recipe-card img:hover {
-    transform: scale(1.2);
-}
-
-.recipe-card img {
-    width: 90%; 
-    height: 80%; 
-    object-fit: cover; 
-    transition: transform 0.3s ease; 
-}
-
-.recipe-card h3 {
-    font-family: 'Poppins', sans-serif;
-    color: #7c705b;
-    margin-top: 10px;
-    font-size: 1.1em;
-    text-align: center;
 }
 
 .newsletter {
@@ -329,6 +201,235 @@ footer a {
 footer a:hover {
     text-decoration: underline;
 }
+
+
+
+
+
+.container {
+    display: flex;
+    margin: 10px auto;
+    gap: 10px;
+    margin-left: 20px;
+}
+
+
+.filters {
+    flex: 1;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    width: 500px; 
+    height: auto;
+    margin-top: 80px;
+
+}
+.filters h2 {
+    font-family: 'Poppins', sans-serif;
+    color: #865439;
+    margin-bottom: 15px;
+    font-size: 1.5em;
+    text-align: left;
+}
+
+.filter-section {
+    flex-direction: column;
+    gap: 20px;
+    margin-bottom: 15px;
+}
+.filter-section div {
+    display: flex;
+    align-items: center; 
+    gap: 10px; 
+    margin-bottom: 8px;
+}
+
+.filter-section label {
+    color: #7c705b;
+    font-size: 1em;
+    line-height: 1.5;
+    cursor: pointer; 
+}
+
+.filter-section input[type="checkbox"] {
+    appearance: none;
+    width: 16px;
+    height: 16px;
+    border: 2px solid #7c705b;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.filter-section input[type="checkbox"]:checked {
+    background-color: #FFB74D;
+    border-color: #FFA726;
+}
+
+#KeywordList {
+    flex-direction: column;
+}
+
+#KeywordList div:first-child {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+#KeywordListDisplay {
+    margin-top: 15px; /* Odstęp od przycisków */
+    display: flex;
+    flex-wrap: wrap; /* Umożliwia zawijanie tagów w nowym wierszu */
+    gap: 10px; /* Odstęp między tagami */
+}
+
+#KeywordList input[type="text"] {
+    width: 200px;
+    padding: 5px 10px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+#KeywordList button {
+    padding: 5px 10px;
+    font-size: 14px;
+    border: none;
+    background-color: #865439;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#KeywordList button:hover {
+    background-color: #6d3a29;
+}
+
+.keyword-item {
+    display: inline-flex;
+    align-items: center;
+    background-color: #f1f1f1;
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-size: 14px;
+    color: #333;
+    border: 1px solid #ccc;
+    transition: background-color 0.3s ease;
+}
+
+.keyword-item:hover {
+    background-color: #e0e0e0;
+}
+
+.remove-keyword-btn {
+    margin-left: 8px;
+    background: none;
+    border: none;
+    color: #865439;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    line-height: 1;
+    transition: color 0.3s ease;
+}
+
+.remove-keyword-btn:hover {
+    color: #6d3a29;
+}
+
+
+
+
+.filters {
+    flex: 1;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    max-width: 500px; /* Zwiększona szerokość sekcji filtrowania */
+    height: auto;
+    margin-top: 20px;
+}
+
+.filters h2 {
+    font-family: 'Poppins', sans-serif;
+    color: #865439;
+    margin-bottom: 15px;
+    font-size: 1.5em;
+    text-align: left;
+}
+
+
+.filtred-recipes h2 {
+    font-family: 'Poppins', sans-serif;
+    color: #6d3a29;
+    padding: 20px;
+    font-size: 30px;
+    margin-top:35px;
+}
+
+#recipe-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Ustawia 2 zdjęcia obok siebie */
+    gap: 20px; /* Odstęp między zdjęciami */
+    width: 100%;
+    justify-content: center; /* Wyrównuje siatkę w poziomie */
+}
+
+#recipe-container p {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.2em;
+    color: #865439;
+    text-align: center;
+    margin-top: 20px;
+
+}
+
+.recipe-card {
+    background-color: transparent;
+    overflow: hidden; 
+    padding: 10px; 
+    text-align: center;
+    border-radius: 5px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.recipe-card:hover {
+    transform: scale(1.05); /* Efekt powiększenia po najechaniu */
+}
+
+.recipe-card img {
+    width: 71%; 
+    height: 80%;
+    object-fit: cover; 
+    border-radius: 10px;
+    transition: transform 0.3s ease; 
+}
+
+.recipe-card img:hover {
+    transform: scale(1.1); /* Powiększenie obrazu na hover */
+}
+
+.recipe-card h3 {
+    font-family: 'Poppins', sans-serif;
+    color: #7c705b;
+    margin-top: 10px;
+    text-align: center;
+}
+.recipe-card a {
+    text-decoration: none; /* Usuwa podkreślenie */
+    color: inherit; /* Dziedziczy kolor tekstu */
+}
+
+.recipe-card a:hover {
+    text-decoration: none; /* Brak podkreślenia podczas najechania */
+}
+
+
 
 
 @media only screen and (max-width: 600px) {
