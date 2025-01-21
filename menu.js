@@ -8,17 +8,16 @@ $(document).ready(function () {
         });
     }
     //Obsługa kliknięcia w linki kategorii w menu
-    $(document).ready(function () {
-        // Obsługa kliknięcia w linki kategorii w menu
-        $('#menu ul li a').on('click', function (event) {
-            const href = $(this).attr('href');
-            if (href.includes("category")) {
-                event.preventDefault(); // Zapobiega domyślnemu działaniu linku
-                const category = encodeURIComponent(href.split("category=")[1]); // Wyodrębnij nazwę kategorii z URL
-                window.location.href = `strona_filtrowania.html?category=${category}`; // Przekieruj na stronę filtrowania z kategorią
-            }
-        });
+    $('#menu ul li a').on('click', function (event) {
+        const href = $(this).attr('href');
+        if (href.includes("category")) {
+            event.preventDefault(); // Zapobiega domyślnemu działaniu linku
+            const category = href.split("category=")[1]; // Wyodrębnij kategorię z URL
+            console.log("Przekierowanie na kategorię:", category); // Debugowanie
+            window.location.href = `strona_filtrowania.html?category=${encodeURIComponent(category)}`; // Przekieruj na stronę filtrowania
+        }
     });
+
     
 
 

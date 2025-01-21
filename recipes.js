@@ -1,7 +1,7 @@
 window.recipes = {
     burger: {
         title: "Burger",
-        tags: ["Fast food", "Mięso", "Trudne", "40-99 zł", "azjatycka"],
+        tags: ["kuchnia-azjatycka", "rodzaj-obiady", "Fast food", "Mięso", "Trudne", "40-99 zł"],
         timeFilter: "short",
         difficultyFilter: "hard",
         costFilter: "cheap",
@@ -23,7 +23,7 @@ window.recipes = {
     },
     'pizza-margherita': {
         title: "Pizza Margherita",
-        tags: ["włoska", "Pizza", "Średnie", "40-99 zł"],
+        tags: ["kuchnia-włoska", "rodzaj-obiady", "Pizza", "Średnie", "40-99 zł"],
         timeFilter: "medium",
         difficultyFilter: "medium-difficulty",
         costFilter: "cheap",
@@ -46,7 +46,7 @@ window.recipes = {
     },
     tiramisu: {
         title: "Tiramisu",
-        tags: ["włoska", "Deser", "Łatwe", "40-99 zł"],
+        tags: ["kuchnia-włoska", "rodzaj-desery", "Deser", "Łatwe", "40-99 zł"],
         timeFilter: "medium",
         difficultyFilter: "easy",
         costFilter: "cheap",
