@@ -37,11 +37,11 @@ header {
 
 #menu {
     display: flex;
-    justify-content: space-between; /* Ensure even spacing between items */
+    justify-content: space-between;
     align-items: center;
     gap: 20px;
-    position: relative; /* Dodano relative, aby menu mogło mieć z-index */
-    z-index: 3; /* Menu będzie miało wyższy z-index niż tło */
+    position: relative; 
+    z-index: 3; 
 }
 
 #menu ul {
@@ -66,19 +66,19 @@ header {
     color: #000000;
     text-align: center;
     box-sizing: border-box;    
-    border-left: 2px solid #c3c3c3; /* Pionowa linia oddzielająca elementy */
+    border-left: 2px solid #c3c3c3; /* pinowa linia oddzielająca elementy */
 }
 
 #menu ul li ul {
     position: absolute;
     left: 0;
     top: 100%;
-    width: calc(100%); /* Dopasowuje szerokość do rodzica, uwzględniając obramowanie */
+    width: calc(100%); 
     display: none;
     background-color: rgb(249, 243, 235, 0.5);
     box-sizing: border-box;
     border-left: none;
-    z-index: 4; /* Ustawienie wyższego z-index dla rozwijanego menu */
+    z-index: 4; 
 }
 
 #menu ul li ul li {
@@ -149,13 +149,13 @@ header {
 
 .hero h1 {
     font-family: 'Open Sans', sans-serif;
-    font-size: 4em; /* Duży tekst */
-    color: rgba(0, 0, 0, 0.9); /* Biały tekst z lekką przezroczystością */
+    font-size: 4em; 
+    color: rgba(0, 0, 0, 0.9); 
     position: relative;
-    font-weight: 400; /* Normalna grubość czcionki */
-    background-color: rgb(249, 243, 235, 0.7); /* Ciemne tło dla lepszej widoczności */
-    padding: 20px 40px; /* Odstępy wokół tekstu */
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); /* Delikatny cień dla eleganckiego wyglądu */
+    font-weight: 400;
+    background-color: rgb(249, 243, 235, 0.7);
+    padding: 20px 40px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); 
 }
 
 .popular-recipes {
@@ -183,11 +183,11 @@ header {
     display: flex;
     background-color:transparent;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    box-shadow: none; /* Usuń cień */
-    overflow: hidden; /* Ukryj nadmiar zawartości */
-    padding: 0; /* Usuń odstępy wewnętrzne */
+    box-shadow: none; 
+    overflow: hidden; /* ukrywa nadmiar zawartości */
+    padding: 0; 
     text-align: center;
-    position: relative; /* Konieczne do obsługi efektu na obrazie */
+    position: relative; 
     width: 100%;
 }
 
@@ -196,12 +196,33 @@ header {
 }
 
 .recipe-card img {
-    width: 100%; /* Zdjęcie wypełnia całą szerokość */
-    height: 100%; /* Zdjęcie wypełnia całą wysokość */
-    object-fit: cover; /* Dopasowanie zdjęcia, zachowując proporcje */
-    transition: transform 0.3s ease; /* Płynny efekt zoomu */
+    width: 100%; 
+    height: 100%; 
+    object-fit: cover; /* dopasowuje zdjęcie, zachowując proporcje */
+    transition: transform 0.3s ease; 
 }
 
+
+#map {
+    width: 100%;
+    height: 400px;
+    margin: 20px auto;
+    border: 1px solid #ccc;
+}
+
+.map-section {
+    padding: 20px;
+    text-align: center;
+    margin: 20px auto;
+    max-width: 800px;
+}
+
+.map-section h2 {
+    font-family: 'Poppins', sans-serif;
+    color: #000;
+    margin-bottom: 15px;
+    font-size: 1.5em;
+}
 .newsletter {
     background-color: rgba(134, 84, 57, 0.6);
     padding: 20px;
@@ -260,22 +281,22 @@ footer a:hover {
 
 /* Stylizacja linku w nagłówku */
 #scroll-link {
-    text-decoration: none; /* Usuń podkreślenie */
-    color: inherit; /* Użyj koloru tekstu z rodzica */
-    cursor: pointer; /* Dodaj wskaźnik wskazujący na klikalność */
+    text-decoration: none; 
+    color: inherit; /* uzywa koloru tekstu z rodzica */
+    cursor: pointer; /* dodaje wskaźnik wskazujący na klikalność */
 }
 
 #scroll-link:hover {
-    color: #865439; /* Opcjonalnie zmień kolor na hover */
+    color: #865439; 
 }
 
-/* Dodaj płynne przewijanie dla całej strony */
+/* Płynne przewijanie dla całej strony */
 html {
     scroll-behavior: smooth;
 }
 
-/*WERSJA MOBILNA*/
 
+/*WERSJA MOBILNA*/
 @media only screen and (max-width: 600px) {
     .recipe-grid {
         flex-direction: column;
@@ -291,20 +312,20 @@ html {
     }
     .search-bar {
         display: flex;
-        flex-direction: column; /* Układ kolumnowy */
-        align-items: stretch; /* Rozciągnij elementy do pełnej szerokości */
-        gap: 10px; /* Odstęp między elementami */
+        flex-direction: column; /* układ kolumnowy */
+        align-items: stretch; /* rozciąga elementy do pełnej szerokości */
+        gap: 10px; 
     }
 
     .search-bar input,
     .search-bar button {
-        width: 100%; /* Dopasowanie szerokości */
-        height: 50px; /* Ustal jednolitą wysokość */
-        padding: 10px; /* Odstępy wewnętrzne */
-        box-sizing: border-box; /* Uwzględnia padding i border w szerokości/wysokości */
-        margin: 0; /* Usuń ewentualne marginesy */
-        border: 1px solid #ccc; /* Ustaw jednolite obramowanie */
-        font-size: 14px; /* Dostosowanie rozmiaru tekstu */
+        width: 100%; 
+        height: 50px;
+        padding: 10px; 
+        box-sizing: border-box; 
+        margin: 0; 
+        border: 1px solid #ccc;
+        font-size: 14px; 
     }
 
     .search-bar button {
@@ -318,37 +339,37 @@ html {
         flex-direction: column;
         position: relative;
         width: 100%;
-        align-items: flex-start; /* Przesunięcie menu blisko logo */
+        align-items: flex-start; /* przesunięcie menu blisko logo */
     }
 
     #menu ul {
-        display: block;  /* Ustawienie menu na blokowy */
+        display: block;  
         padding: 0;
         margin: 0;
-        width: 100%; /* Menu zajmuje całą szerokość */
+        width: 100%; 
     }
 
     #menu ul li {
-        display: block;  /* Każdy element menu na pełnej szerokości */
+        display: block;  /* każdy element menu na pełnej szerokości */
         padding: 10px 20px;
         border: none;
-        text-align: left;  /* Wyrównanie tekstu do lewej */
+        text-align: left; 
         position: relative;
-        width: 100%; /* Szerokość elementów menu na 100% */
+        width: 100%; 
     }
 
     #menu ul li ul {
         display: none;
         position: relative;
-        left: 0%;  /* Pozycjonowanie rozwijanego menu po prawej stronie */
+        left: 0%;  /* pozycjonowanie rozwijanego menu po prawej stronie */
         top: 100%;
-        width: 100%; /* Szerokość submenu ustawiona na 100% */
+        width: 100%; 
         background-color: rgb(249, 243, 235);
         min-width: 180px;
         box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
         border-left: 2px solid #c3c3c3;
         text-align: left;
-        padding: 0; /* Usuwamy padding, aby submenu było jednolite */
+        padding: 0;
     }
 
     #menu ul li ul li {
@@ -360,9 +381,9 @@ html {
     #menu ul li ul li a {
         text-decoration: none;
         color: #000;
-        display: block; /* Linki w submenu zajmują całą szerokość */
-        width: 100%; /* Szerokość linków dopasowana do szerokości submenu */
-        text-align: left; /* Wyrównanie tekstu do lewej strony */
+        display: block; 
+        width: 100%; 
+        text-align: left; 
     }
 }
 

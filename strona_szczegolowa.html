@@ -14,7 +14,10 @@
         <script src="detail-page.js"></script>
         <script src="navigate.js"></script>
         <script src="search.js"></script>
-
+        <script src="map.js"></script>
+        <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+        <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+        <meta name="keywords" content="szczegóły przepisu, przepisy kulinarne, składniki, wykonanie przepisu, kuchnia włoska, kuchnia azjatycka, kuchnia meksykańska, desery, obiady, śniadania, dieta wegańska, dieta bezglutenowa, kuchnia europejska">
 
     </head>
     <body>
@@ -89,7 +92,12 @@
                 </div>
             </div>
         </div>
-        
+
+        <section class="map-section">
+            <h2>Nasza lokalizacja w sercu Krakowa</h2>
+            <div id="map"></div>
+        </section>
+
         <section class="newsletter">
             <h2>Śledź najnowsze trendy</h2>
             <p>Dzięki newsletterowi będziesz na bieżąco z wszystkimi nowościami!</p>
