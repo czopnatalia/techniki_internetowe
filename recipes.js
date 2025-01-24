@@ -269,8 +269,8 @@ window.recipes = {
             "Podawaj z ulubionymi dodatkami."
         ]
     },
-    bread: {
-        id: "bread",
+    'domowy-chleb': {
+        id: "domowy-chleb",
         title: "Domowy Chleb",
         tags: ["Wypieki", "Pieczywo", "Średnie", "0-39 zł"],
         timeFilter: "long",
