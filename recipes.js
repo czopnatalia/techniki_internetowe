@@ -64,6 +64,85 @@ window.recipes = {
             "Schładzaj w lodówce przez co najmniej 4 godziny."
         ]
     },
+    brownie: {
+        id: "brownie",
+        title: "Brownie",
+        tags: ["Brownie", "Deser", "Łatwe", "40-99 zł"],
+        timeFilter: "medium",
+        difficultyFilter: "easy",
+        costFilter: "cheap",
+        time: "40 minut",
+        portions: "4",
+        image: "brownie.jpeg",
+        ingredients: [
+            "3 jajka",
+            "200g masła",
+            "200g cukru",
+            "200g gorzkiej czekolady",
+            "120g mąki pszennej",
+            "szczypta soli"
+        ],
+        instructions: [
+            "Rozpuść masło i czekoladę.",
+            "Ubij jajka z cukrem.",
+            "Do masy jajecznej wlej przestudzoną mieszankę masła i czekolady. Dokładnie wymieszaj.",
+            "Dodaj mąkę i szczyptę soli, a następnie delikatnie wymieszaj, aż składniki się połączą.",
+            "Piecz w piekarniku nagrzanym do 180°C przez 20-25 minut."
+        ]
+    },
+    'makaron-z-pesto': {
+        id: "makaron-z-pesto",
+        title: "Makaron z pesto",
+        tags: ["Włoska", "Makaron", "Łatwe", "0-39 zł"],
+        timeFilter: "short",
+        difficultyFilter: "easy",
+        costFilter: "cheap",
+        time: "25 minut",
+        portions: "2",
+        image: "makaron.jpeg",
+        ingredients: [
+            "200g makaronu spaghetti",
+            "3 łyżki pesto bazyliowego",
+            "2 łyżki oliwy z oliwek",
+            "30g parmezanu",
+            "garść świeżych listków bazylii"
+        ],
+        instructions: [
+            "Ugotuj makaron według instrukcji na opakowaniu.",
+            "W głębokiej patelni lub misce wymieszaj pesto z oliwą z oliwek. Dodaj trochę wody z gotowania makaronu.",
+            "Przełóż odcedzony makaron do sosu z pesto i dokładnie wymieszaj",
+            "Posyp makaron tartym parmezanem, świeżą bazylią i dopraw solą oraz pieprzem do smaku."
+        ]
+    },
+    pancakes: {
+        id: "pancakes",
+        title: "Pancakes",
+        tags: ["Pancakes", "Śniadania", "Deser", "Łatwe", "40-99 zł"],
+        timeFilter: "medium",
+        difficultyFilter: "easy",
+        costFilter: "cheap",
+        time: "40 minut",
+        portions: "2",
+        image: "pancakes.jpeg",
+        ingredients: [
+            "150g mąki pszennej",
+            "250ml mleka",
+            "1 jajko",
+            "2 łyżki cukru",
+            "2 łyżki roztopionego masła",
+            "szczypta soli",
+            "1 łyżeczka proszku do pieczenia"
+        ],
+        instructions: [
+            "W dużej misce wymieszaj suche składniki: mąkę, cukier, proszek do pieczenia i sól.",
+            "W osobnym naczyniu połącz mleko, jajko i roztopione masło. Dobrze wymieszaj.",
+            "Stopniowo dodawaj mokre składniki do suchych, mieszając trzepaczką, aż powstanie gładkie, jednolite ciasto bez grudek.",
+            "Na średnim ogniu rozgrzej patelnię z odrobiną oleju lub masła.",
+            "Wylej porcję ciasta (np. 2 łyżki na jeden placek) na rozgrzaną patelnię.",
+            "Smaż, aż na powierzchni pojawią się bąbelki (ok. 2 minuty), a następnie przewróć na drugą stronę i smaż jeszcze ok. 1 minuty, aż będą złociste.",
+            "Podawaj z ulubionymi dodatkami."
+        ]
+    },
     "pieczone-warzywa-z-serem": {
         id: "pieczone-warzywa-z-serem",
         title: "Pieczone Warzywa z Serem",
