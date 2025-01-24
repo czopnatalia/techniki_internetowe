@@ -16,7 +16,10 @@
         <script src="navigate.js"></script>
         <script src="keywords_checkbox.js"></script>
         <script src="search.js"></script>
-
+        <script src="map.js"></script>
+        <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+        <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+        <meta name="keywords" content="filtrowanie przepisów, kuchnia włoska, kuchnia azjatycka, kuchnia meksykańska, desery, obiady, śniadania, przekąski, dieta bezglutenowa, dieta wegańska, dieta wegetariańska">
 
         
     </head>
@@ -109,8 +112,8 @@
                         <label for="easy">Łatwe</label>
                     </div>
                     <div>
-                        <input type="checkbox" id="medium-difficulty" name="difficulty">
-                        <label for="medium-difficulty">Średnie</label>
+                        <input type="checkbox" id="medium" name="difficulty">
+                        <label for="medium">Średnie</label>
                     </div>
                     <div>
                         <input type="checkbox" id="hard" name="difficulty">
@@ -124,8 +127,8 @@
                         <label for="cheap">40-99 zł</label>
                     </div>
                     <div>
-                        <input type="checkbox" id="medium-cost" name="cost">
-                        <label for="medium-cost">100-250 zł</label>
+                        <input type="checkbox" id="medium" name="cost">
+                        <label for="medium">100-250 zł</label>
                     </div>
                     <div>
                         <input type="checkbox" id="expensive" name="cost">
@@ -138,7 +141,12 @@
                 <div id="recipe-container">Ładowanie przepisów...</div>
             </section>
         </div>
-        
+
+        <section class="map-section">
+            <h2>Nasza lokalizacja w sercu Krakowa</h2>
+            <div id="map"></div>
+        </section>
+
         <section class="newsletter">
             <h2>Śledź najnowsze trendy</h2>
             <p>Dzięki newsletterowi będziesz na bieżąco z wszystkimi nowościami!</p>

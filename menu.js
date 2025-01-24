@@ -1,5 +1,5 @@
 $(document).ready(function () {
-    // Funkcja związana z logo
+    //funkcja związana z logo
     const logo = document.getElementById("logo");
     if (logo) {
         logo.addEventListener("click", function (event) {
@@ -7,21 +7,19 @@ $(document).ready(function () {
             window.location.href = "strona_glowna.html"; // Przekierowanie na stronę główną
         });
     }
-    //Obsługa kliknięcia w linki kategorii w menu
+    //obsługa kliknięcia w linki kategorii w menu
     $('#menu ul li a').on('click', function (event) {
         const href = $(this).attr('href');
         if (href.includes("category")) {
-            event.preventDefault(); // Zapobiega domyślnemu działaniu linku
-            const category = href.split("category=")[1]; // Wyodrębnij kategorię z URL
-            console.log("Przekierowanie na kategorię:", category); // Debugowanie
-            window.location.href = `strona_filtrowania.html?category=${encodeURIComponent(category)}`; // Przekieruj na stronę filtrowania
+            event.preventDefault(); // zapobiega domyślnemu działaniu linku
+            const category = href.split("category=")[1]; // wyodrębnia kategorię z URL
+            console.log("Przekierowanie na kategorię:", category); // debugowanie
+            window.location.href = `strona_filtrowania.html?category=${encodeURIComponent(category)}`; // przekierowuje na stronę filtrowania
         }
     });
 
-    
 
-
-    // Obsługa newslettera
+    // obsługa newslettera
     const newsletterSubmit = document.getElementById("newsletter-submit");
     if (newsletterSubmit) {
         newsletterSubmit.addEventListener("click", function () {
@@ -31,7 +29,7 @@ $(document).ready(function () {
                 return;
             }
 
-            // Usunięcie formularza po zapisie
+            // usuwanie formularza po zapisie
             const newsletterSection = document.querySelector(".newsletter");
             if (newsletterSection) {
                 newsletterSection.innerHTML = "<p>Dziękujemy za zapisanie się do naszego newslettera!</p>";
@@ -61,7 +59,7 @@ $(document).ready(function () {
     // Funkcja dla małych ekranów (<1260px) - kliknięcie
     if ($(window).width() < 1260) {
         $('#menu ul li').on('click', function (event) {
-            event.stopPropagation(); // Zapobiega propagacji kliknięcia
+            event.stopPropagation(); // zapobiega propagacji kliknięcia!
             var submenu = $(this).children('ul');
 
             // Sprawdzamy, czy submenu jest widoczne
@@ -73,7 +71,7 @@ $(document).ready(function () {
             }
         });
 
-        // Ukryj wszystkie submenu po kliknięciu poza menu
+        // Ukrywanie wszystkich submenu po kliknięciu poza menu
         $(document).on('click', function (event) {
             if (!$(event.target).closest('#menu').length) {
                 $('#menu ul li').children('ul').stop(true, true).slideUp('fast');
@@ -126,7 +124,7 @@ document.addEventListener("DOMContentLoaded", function () {
             if (targetSection) {
                 window.scrollTo({
                     top: targetSection.offsetTop,
-                    behavior: "smooth" // Płynne przewijanie
+                    behavior: "smooth" // Płynne przewijanie!!
                 });
             }
         });

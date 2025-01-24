@@ -13,9 +13,10 @@
         <script src="menu.js"></script>
         <script src="navigate.js"></script>
         <script src="search.js"></script>
-
-
-
+        <script src="map.js"></script>
+        <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+        <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+        <meta name="keywords" content="przepisy, kuchnia azjatycka, kuchnia włoska, kuchnia meksykańska, desery, obiady, śniadania, przekąski, dieta bezglutenowa, dieta wegańska, dieta wegetariańska">
     </head>
     <body>
         <header>
@@ -80,6 +81,11 @@
                     <img src="tiramisu.jpg" alt="Tiramisu">
                 </div>
             </div>
+        </section>
+
+        <section class="map-section">
+            <h2>Nasza lokalizacja w sercu Krakowa</h2>
+            <div id="map"></div>
         </section>
 
         <section class="newsletter">

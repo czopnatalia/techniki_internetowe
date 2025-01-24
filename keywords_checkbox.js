@@ -1,6 +1,6 @@
 const keywords = [];
 
-// Funkcja dodawania słowa kluczowego
+//funkcja dodawania słowa kluczowego
 function addKeyword() {
     const input = document.getElementById("keywordInput");
     if (!input) {
@@ -13,13 +13,13 @@ function addKeyword() {
     if (keyword && !keywords.includes(keyword)) {
         keywords.push(keyword);
         displayKeywords();
-        input.value = ""; // Wyczyść pole po dodaniu
+        input.value = ""; // czyści pole po dodaniu
     } else {
         alert(keyword ? "To słowo kluczowe już zostało dodane." : "Proszę wpisać unikalne słowo kluczowe.");
     }
 }
 
-// Funkcja wyświetlania słów kluczowych
+//funckja wyświetlania słów kluczowych
 function displayKeywords() {
     const keywordList = document.getElementById("KeywordListDisplay");
     if (!keywordList) {
@@ -37,18 +37,18 @@ function displayKeywords() {
         .join("");
 }
 
-// Funkcja usuwania słowa kluczowego
+//funkcja usuwania słowa kluczowego
 function removeKeyword(index) {
     if (index >= 0 && index < keywords.length) {
         keywords.splice(index, 1);
         displayKeywords();
-        applyFilters(); // Przywrócenie filtrowania po usunięciu słowa kluczowego
+        applyFilters(); // przywraca filtrowanie po usunięciu słowa kluczowego
     } else {
         console.error("Nieprawidłowy indeks słowa kluczowego.");
     }
 }
 
-// Funkcja filtrowania i dynamicznego renderowania przepisów
+//!!!funkcja filtrowania i dynamicznego renderowania przepisów!!!
 function applyFilters() {
     const selectedFilters = {
         time: Array.from(document.querySelectorAll('input[name="time"]:checked')).map(checkbox => checkbox.id),
@@ -86,7 +86,7 @@ function applyFilters() {
     }
 }
 
-// Funkcja filtrowania widocznych elementów na podstawie atrybutów `data-filters`
+//funkcja filtrowania widocznych elementów na podstawie atrybutów `data-filters`
 function filterRecipes() {
     const activeFilters = Array.from(document.querySelectorAll('input[type="checkbox"]:checked'))
         .map(checkbox => checkbox.getAttribute('data-filter'));
@@ -98,9 +98,10 @@ function filterRecipes() {
     });
 }
 
-// Inicjalizacja zdarzeń
+
+//inicjalizacja zdarzeń
 document.addEventListener("DOMContentLoaded", () => {
-    // Obsługa przycisku dodawania słowa kluczowego
+    //obsługa przycisku dodawania słowa kluczowego
     const addKeywordButton = document.getElementById("addKeywordBtn");
     if (addKeywordButton) {
         addKeywordButton.addEventListener("click", addKeyword);
@@ -108,7 +109,7 @@ document.addEventListener("DOMContentLoaded", () => {
         console.error("Element o ID 'addKeywordBtn' nie został znaleziony.");
     }
 
-    // Obsługa przycisku "Filtruj"
+    // obsługa przycisku "Filtruj"
     const filterButton = document.getElementById("filterBtn");
     if (filterButton) {
         filterButton.addEventListener("click", applyFilters);
@@ -116,7 +117,7 @@ document.addEventListener("DOMContentLoaded", () => {
         console.error("Element o ID 'filterBtn' nie został znaleziony.");
     }
 
-    // Obsługa checkboxów
+    // obsługa checkboxów
     const filterInputs = document.querySelectorAll('input[type="checkbox"]');
     if (filterInputs.length > 0) {
         filterInputs.forEach(input => {
@@ -126,6 +127,6 @@ document.addEventListener("DOMContentLoaded", () => {
         console.warn("Nie znaleziono żadnych checkboxów do obsługi filtrów.");
     }
 
-    // Inicjalne zastosowanie filtrów przy załadowaniu strony
+    // inicjlane zastosowanie filtrów przy załadowaniu strony
     applyFilters();
 });

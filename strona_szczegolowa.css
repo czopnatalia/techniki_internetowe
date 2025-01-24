@@ -26,8 +26,8 @@ header {
     background-color: #f9f3eb;
     padding: 10px 20px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    position: relative; /* Dodano relative, aby z-index działał */
-    z-index: 2; /* Ustawienie większego z-index dla header */
+    position: relative;
+    z-index: 2; 
 }
 
 .logo img{
@@ -38,11 +38,11 @@ header {
 
 #menu {
     display: flex;
-    justify-content: space-between; /* Ensure even spacing between items */
+    justify-content: space-between; 
     align-items: center;
     gap: 20px;
-    position: relative; /* Dodano relative, aby menu mogło mieć z-index */
-    z-index: 3; /* Menu będzie miało wyższy z-index niż tło */
+    position: relative;
+    z-index: 3;
 }
 
 #menu ul {
@@ -67,19 +67,19 @@ header {
     color: #000000;
     text-align: center;
     box-sizing: border-box;
-    border-left: 2px solid #c3c3c3; /* Pionowa linia oddzielająca elementy */
+    border-left: 2px solid #c3c3c3;
 }
 
 #menu ul li ul {
     position: absolute;
     left: 0;
     top: 100%;
-    width: calc(100%); /* Dopasowuje szerokość do rodzica, uwzględniając obramowanie */
+    width: calc(100%); 
     display: none;
     background-color: rgb(249, 243, 235, 0.5);
     box-sizing: border-box;
     border-left: none;
-    z-index: 4; /* Ustawienie wyższego z-index dla rozwijanego menu */
+    z-index: 4; 
 }
 
 #menu ul li ul li {
@@ -205,6 +205,26 @@ footer a:hover {
 }
 
 
+#map {
+    width: 100%;
+    height: 400px;
+    margin: 20px auto;
+    border: 1px solid #ccc;
+}
+
+.map-section {
+    padding: 20px;
+    text-align: center;
+    margin: 20px auto;
+    max-width: 800px;
+}
+
+.map-section h2 {
+    font-family: 'Poppins', sans-serif;
+    color: #000;
+    margin-bottom: 15px;
+    font-size: 1.5em;
+}
 
 .container {
     display:inline-flex;
@@ -214,26 +234,26 @@ footer a:hover {
 
 .recipe-header {
     display: flex;
-    flex-direction: row; /* Obraz po lewej, tekst po prawej */
+    flex-direction: row; /* Obraz po lewej, a tekst po prawej */
     align-items: center;
     justify-content: space-between;
     gap: 20px;
-    margin: 40px auto; /* Większy odstęp od góry */
+    margin: 40px auto; 
     padding: 20px;
     background-color: #ffffff;
     border-radius: 10px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    max-width: 550px; /* Ogranicz szerokość sekcji */
+    max-width: 550px; 
 }
 
 .recipe-header img {
-    flex: 0 0 30%; /* Zajmuje 30% szerokości sekcji */
-    max-width: 300px; /* Ogranicz maksymalny rozmiar */
+    flex: 0 0 30%; /* zdj zajmuje 30% szerokości sekcji */
+    max-width: 300px;
     height: auto;
     border-radius: 10px;
-    object-fit: cover; /* Dopasowanie zdjęcia */
+    object-fit: cover; 
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    background-color: #f9d776; /* Żółte tło zapasowe */
+    background-color: #f9d776; 
 }
 
 .recipe-header .recipe-info {
@@ -251,7 +271,7 @@ footer a:hover {
 }
 
 .recipe-header .tags {
-    flex-wrap: wrap; /* Umożliwia zawijanie tagów w nowym wierszu */
+    flex-wrap: wrap; /* umozliwia zawijanie tagów w nowym wierszu */
     display: flex;
     gap: 10px;
 }
@@ -302,7 +322,7 @@ footer a:hover {
     background-color: #fff;
     border-radius: 10px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    max-width: 1000px; /* Ogranicz szerokość sekcji */
+    max-width: 1000px;
 }
 
 .recipe-body.hidden {
@@ -341,25 +361,26 @@ footer a:hover {
     }
     .search-bar {
         display: flex;
-        flex-direction: column; /* Układ kolumnowy */
-        align-items: stretch; /* Rozciągnij elementy do pełnej szerokości */
-        gap: 10px; /* Odstęp między elementami */
+        flex-direction: column; /* układ kolumnowy */
+        align-items: stretch; /* rozciaga elementy do pełnej szerokości */
+        gap: 10px; 
     }
 
     .search-bar input,
     .search-bar button {
-        width: 100%; /* Dopasowanie szerokości */
-        height: 50px; /* Ustal jednolitą wysokość */
-        padding: 10px; /* Odstępy wewnętrzne */
-        box-sizing: border-box; /* Uwzględnia padding i border w szerokości/wysokości */
-        margin: 0; /* Usuń ewentualne marginesy */
-        border: 1px solid #ccc; /* Ustaw jednolite obramowanie */
-        font-size: 14px; /* Dostosowanie rozmiaru tekstu */
+        width: 100%;
+        height: 50px; 
+        padding: 10px;
+        box-sizing: border-box; 
+        margin: 0; 
+        border: 1px solid #ccc; 
+        font-size: 14px; 
     }
 
     .search-bar button {
-        width: 100%; /* Przycisk na pełną szerokość */
+        width: 100%; 
     }
+
 }
 
 @media only screen and (max-width: 1260px) {
@@ -368,67 +389,125 @@ footer a:hover {
         flex-direction: column;
         position: relative;
         width: 100%;
-        align-items: flex-start; /* Przesunięcie menu blisko logo */
+        align-items: flex-start; 
     }
 
     #menu ul {
-        display: block;  /* Ustawienie menu na blokowy */
+        display: block;  
         padding: 0;
         margin: 0;
-        width: 100%; /* Menu zajmuje całą szerokość */
+        width: 100%; 
     }
 
     #menu ul li {
-        display: block;  /* Każdy element menu na pełnej szerokości */
+        display: block; 
         padding: 10px 20px;
         border: none;
-        text-align: left;  /* Wyrównanie tekstu do lewej */
+        text-align: left;  
         position: relative;
-        width: 100%; /* Szerokość elementów menu na 100% */
+        width: 100%; 
     }
 
     #menu ul li ul {
         display: none;
         position: relative;
-        left: 0%;  /* Pozycjonowanie rozwijanego menu po prawej stronie */
+        left: 0%; 
         top: 100%;
-        width: 100%; /* Szerokość submenu ustawiona na 100% */
+        width: 100%; 
         background-color: rgb(249, 243, 235);
         min-width: 180px;
         box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
         border-left: 2px solid #c3c3c3;
         text-align: left;
-        padding: 0; /* Usuwamy padding, aby submenu było jednolite */
+        padding: 0; 
     }
 
     #menu ul li ul li {
         padding: 10px 20px;
-        text-align: left; /* Wyrównanie tekstu w submenu */
-        width: 100%; /* Submenu ma zajmować pełną szerokość */
+        text-align: left;
+        width: 100%; 
     }
 
     #menu ul li ul li a {
         text-decoration: none;
         color: #000;
-        display: block; /* Linki w submenu zajmują całą szerokość */
-        width: 100%; /* Szerokość linków dopasowana do szerokości submenu */
-        text-align: left; /* Wyrównanie tekstu do lewej strony */
+        display: block; 
+        width: 100%; 
+        text-align: left; 
+    }
+
+
+
+    .container {
+        display: flex;
+        flex-direction: column; /* układ pionowy */
+        gap: 20px;
+    }
+
+    .recipe-header {
+        order: 1; /* opis przepisu wyżej! */
+        margin: 20px auto;
+        padding: 20px;
+        max-width: 100%; 
+    }
+
+    .recipe-body {
+        order: 2; /* instrukcje poniżej! */
+        margin: 20px auto;
+        padding: 20px;
+        max-width: 100%; 
+        display: none; /* domyslnie ukrytz */
+        opacity: 0; /* niewidoczna */
+        max-height: 0; /* Brak miejsca na ukrytą sekcję */
+        overflow: hidden; /* Ukrycie treści */
+        transition: max-height 0.3s ease, opacity 0.3s ease; /* płynne animacje */
+        
+    }
+
+    .recipe-body.hidden {
+        display: none; /* Sekcja nadal ukryta */
+    }
+
+    .recipe-body:not(.hidden) {
+        display: block; /* Widoczna sekcja */
+        opacity: 1; /* Widoczna */
+        max-height: 1000px; /* Przestrzeń na widoczną sekcję */
+        overflow: auto; /*  Właczone przewijanie w razie potrzeby */
+        
+    }
+
+    .show-recipe-btn {
+        display: inline-block;
+        background-color: #865439;
+        color: white;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        text-align: center;
+        font-size: 16px;
+        margin-top: 10px;
+        transition: background-color 0.3s ease;
+    }
+
+    .show-recipe-btn:hover {
+        background-color: #6d3a29;
     }
 }
 
 @media only screen and (min-width: 1261px) {
     #menu ul {
-        display: flex;  /* Menu w poziomie */
+        display: flex;  
         flex-direction: row;
         gap: 20px;
     }
 
     #menu ul li {
-        display: inline-block;  /* Ustawienie elementów w jednym wierszu */
+        display: inline-block;  
     }
 
     #menu ul li ul {
-        display: none;  /* Submenu będzie wyświetlane tylko przy hover */
+        display: none;  
     }
 }
 

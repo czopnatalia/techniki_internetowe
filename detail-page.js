@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
-    const recipes = window.recipes; // Globalny obiekt recipes
+    const recipes = window.recipes; // globalny obiekt recipes!!
     
     const urlParams = new URLSearchParams(window.location.search);
     const recipeId = urlParams.get("id");
