@@ -4,7 +4,7 @@ $(document).ready(function () {
     if (logo) {
         logo.addEventListener("click", function (event) {
             event.preventDefault(); // Zapobiega domyślnemu działaniu linku
-            window.location.href = "strona_glowna.html"; // Przekierowanie na stronę główną
+            window.location.href = "index.html"; // Przekierowanie na stronę główną
         });
     }
     //obsługa kliknięcia w linki kategorii w menu
