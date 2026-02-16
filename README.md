@@ -1,1 +1,1 @@
-"# techniki_internetowe" 
+https://czopnatalia.github.io/techniki_internetowe/
